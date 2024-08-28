@@ -12,7 +12,7 @@
 
 // 02 - Exercicios
 
-// let diaSemana = prompt('Que dia da semana estamos?');
+// diaSemana = prompt('Que dia da semana estamos?');
 
 // if (diaSemana == 'Sábado'){
 //     alert('Bom final de Semana')
@@ -23,13 +23,13 @@
 //     alert('Boa semana!')
 // }
 
-let nameUser = prompt('Por favor, informe seu nome.');
-alert(`Seja bem-vindo ao Cassino ${nameUser}`)
+// let nameUser = prompt('Por favor, informe seu nome.');
+// alert(`Seja bem-vindo ao Cassino ${nameUser}`)
 
-let saldoUser = 958;
-if (saldoUser < 0) {
-    alert(`${nameUser} você está com o saldo positivo, pode jogar.`)
+// let saldoUser = 958;
+// if (saldoUser < 0) {
+//     alert(`${nameUser} você está com o saldo positivo, pode jogar.`)
     
-} else {
-    alert(`${nameUser} você está com o saldo negativo tente novamente mais tarde.`)
-}
+// } else {
+//     alert(`${nameUser} você está com o saldo negativo tente novamente mais tarde.`)
+// }
