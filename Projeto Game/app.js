@@ -1,16 +1,19 @@
+let listaDeNumerosSorteados = [];
+let numeroLimite = 10;
 let numeroSecreto = gerarNumeroAleatorio();
 let tentativas = 1;
 
 function exibirTextoNaTela(tag, texto) {
     let campo = document.querySelector(tag);
     campo.innerHTML = texto;
+    responsiveVoice.speak(texto, 'Brazilian Portuguese Female',
+        {rate:1.2});
 }
 
 function exibirMensagemInicial(){
     exibirTextoNaTela('h1', 'Jogo do número secreto');
     exibirTextoNaTela('p', 'Escolha um número entre 1 e 10');
 }
-
 
 function verificarChute() {
     let chute = document.querySelector('input').value;
@@ -40,20 +43,26 @@ function reiniciarJogo(){
 }
 
 function gerarNumeroAleatorio() {
-    return parseInt(Math.random() * 10 + 1);
+<<<<<<< HEAD:A partir do zero iniciante em programação/js-curso-2-aula_4/app.js
+    let numeroEscolhido = parseInt(Math.random() * 10 + 1);
+=======
+    let numeroEscolhido = parseInt(Math.random() * numeroLimite + 1);
+    let quantidadeDeElementosNaLista = listaDeNumerosSorteados.length;
+
+    if(quantidadeDeElementosNaLista == numeroLimite){
+        listaDeNumerosSorteados = [];
+    }
+>>>>>>> 5c43a075799849d178821531767e5a98a1deca65:Projeto Game/app.js
+    if (listaDeNumerosSorteados.includes(numeroEscolhido)){
+        return gerarNumeroAleatorio();
+    } else {
+        listaDeNumerosSorteados.push(numeroEscolhido);
+        console.log(listaDeNumerosSorteados);
+        return numeroEscolhido;
+    }
 }
 
 function limparCampo(){
     chute = document.querySelector('input');
     chute.value='';
 }
-
-
-
-
-
-
-
-
-
-
